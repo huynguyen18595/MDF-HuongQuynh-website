@@ -15,7 +15,12 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
+       <style>
+       #map {
+        height: 450px;
+        width:  540px;
+       }
+    </style>
   </head>
 
   <body>
@@ -86,13 +91,13 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('img/20170929_111124.jpg')">
+          <div class="carousel-item active" style="background-image: url('img/cc hihi-2.jpg')">
             <div class="carousel-caption d-none d-md-block">
                 <p>Cổng chính</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('img/20171121_105049.jpg')">
+          <div class="carousel-item" style="background-image: url('img/hihi2-2.jpg')">
             <div class="carousel-caption d-none d-md-block">
                 <p>Phòng kinh doanh</p>
             </div>
@@ -148,7 +153,7 @@
           <div class="card h-100">
             <h4 class="card-header">Ván MFC</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Là ván MDF được phủ Melamine.Ván MFC có ứng dụng rộng rãi đặc biệt là trong lĩnh vực nội thất văn phòng, nhà ở, chung cư cao cấp, bệnh viện, trường học,...Chúng tôi cung cấp cho khách hàng sản phẩm có chất lượng cao và giá cả rất cảnh tranh.  </p>
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Learn More</a>
@@ -248,7 +253,33 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+              <div id="map"></div>
+            <script>
+                function initMap() {
+                var uluru = {lat: 10.986976, lng: 106.693088};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 15,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                  title:'DNTN HƯƠNG QUỲNH'
+                });
+                var contentString = "DNTN HƯƠNG QUỲNH (Đường Phú Lợi Phường Phú Hoà)";
+                var infoWindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                marker.addListener('click',function(){
+                   infoWindow.open(map,marker); 
+                });
+               
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB8HZsXTeMhFZ_v966LCBWT4AKzGK0yUc&callback=initMap">
+            </script>
+          
         </div>
       </div>
       <!-- /.row -->
