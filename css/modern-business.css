@@ -28,3 +28,13 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+.btn-index {
+  color: black;
+  background-color: #ffbf00;
+  border-color: #ffbf00;
+}
+.btn-index:hover {
+  color: black;
+  background-color: 	#cc9900;
+  border-color: 	#cc9900;
+}
