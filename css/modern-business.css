@@ -41,6 +41,33 @@ body {
 .color-yellow{
     color: #ffbf00;
 }
+a{
+    color: #ffbf00;
+}
+a:hover{
+    color: #cc9900;
+}
+h1{
+    font-family: Times New Roman;
+}
+h2{
+    font-family: Times New Roman;
+}
+h3{
+    font-family: Times New Roman;
+}
+h4{
+    font-family: Times New Roman;
+}
+h5{
+    font-family: Times New Roman;
+}
+p {
+    font-family: Times New Roman;
+}
+li{
+    font-family: Times New Roman;
+}
 .img-index{
     width:  700rm;
     height:  200px;
